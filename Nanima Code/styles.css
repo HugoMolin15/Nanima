@@ -1,0 +1,404 @@
+body {
+    margin: 0;
+    padding: 0 32px;
+    box-sizing: border-box;
+    font-family: "MyFont", serif;
+    background-color: #F6EBDC;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('Fonts/kefa.ttf');
+  font-weight: normal;
+  font-weight: lighter;
+  font-style: normal;
+}
+
+
+.section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Header */
+
+.header{
+    display: flex;
+    flex-direction: row;
+    gap: auto;
+    width: 1280px;
+    max-width: 1280px;
+    padding: 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img{
+    min-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.header img:hover{
+    cursor: pointer;
+}
+
+.header a{
+    text-decoration: none;
+    color: rgba(0,0,0,0.50);
+    font-weight: 600;
+}
+
+.header a.button{
+    border: 2px solid rgb(0, 0, 0, 25%);
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #4A5D3A;
+}
+
+.header a.button:hover{
+    background-color: #4A5D3A;
+    color: white;
+    border: 2px solid #4A5D3A;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Background Image */
+
+.bg-section {
+  height: 655px;
+  max-height: 655px; /* or use min-height / vh for responsiveness */
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url('Images/background.jpeg');
+  background-size: cover;       /* fills the area, cropping as needed */
+  background-position: center;  /* center the crop */
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  border-radius: 16px;
+  margin: 32px 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.bg-section div{
+    color: white;
+    margin: 96px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+    .bg-section div {
+        margin: 48px;
+    }
+}
+
+@media (max-width: 600px) {
+    .bg-section div {
+        margin: 24px;
+    }
+}
+
+.bg-section h1{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: -16px;
+    padding: 0;
+}
+
+.bg-section p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Quote */
+
+.quote-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #38533C;
+    border-radius: 20px 100px 20px 100px;
+}
+
+.quote-container{
+    display: flex;
+    margin: 90px 48px;
+    max-width: 1062px;
+    width: 100%;
+    padding: 32px 64px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 16px;
+    background: #38533C;
+    position: relative; 
+    overflow: visible;
+}
+
+@media (max-width: 975px) {
+  .break {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+    .quote-container {
+        padding: 16px;
+    }
+}
+
+.quote-container::before,
+.quote-container::after {
+    position: absolute;
+    font-size: 150px;
+    line-height: 1;
+    color: #D3FF53; 
+    font-weight: 600;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.quote-container::before {
+    content: '“';
+    top: 0px;
+    left: -15px;
+    transform: translate(-6px, -20px); 
+}
+
+.quote-container::after {
+    content: '”';
+    bottom: -100px;
+    right: -10px;
+    transform: translate(6px, 20px); 
+}
+
+.quote-container p{
+    font-size: 1.5rem;
+    text-align: center;
+    z-index: 2; 
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Collage */
+
+.collage-section{
+    display: flex;
+    padding: 96px 0;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    background: #F6EBDC;
+}
+
+.collage-container{
+    max-width: 1280px;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 2fr 2fr; /* 2 equal columns */
+    gap: 24px;
+}
+
+@media (max-width: 640px) {
+    .collage-container {
+        grid-template-columns: 1fr; /* single column on small screens */
+    }
+
+    .collage-section{
+        padding: 36px 0;
+    }
+}
+
+
+.collage-card {
+    position: relative;
+    display: block;
+    height: 270px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+}
+
+.collage-card:hover h2 {
+    text-decoration: underline;
+}
+
+
+/* keep heading above the pseudo element */
+.collage-card h2 {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    margin: 0;
+    z-index: 2;
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* even cards align text to right */
+.collage-container .collage-card:nth-child(even) h2 {
+    left: auto;
+    right: 16px;
+    text-align: right;
+}
+
+
+/* Footer section */
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 24px 64px 24px;
+    margin-top: 32px;
+    justify-content: center;
+    align-items: center;
+    background: #38533C;
+    color: white;
+    border-radius: 32px 32px 0 0;
+    gap: 32px;
+}
+
+.text-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:start;
+    flex-wrap: wrap;
+    gap: 48px;
+    width: 80%;
+}
+
+.text-section p{
+    font-size: 20px;
+}
+
+.text-section a{
+    text-decoration: none;
+    color: white;
+}
+
+.text-section div{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 8px;
+}
+
+.footer-section hr{
+    width: 80%;
+    background: rgb(255, 255, 255, 0.3);
+    border-radius: 55px;
+    height: 1px;
+    border: 0px solid transparent;
+}
+
+.rights{
+    color: rgb(255, 255, 255, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+.card-header {
+    height: 450px;
+    border-radius: 16px;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    padding: 48px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-header {
+    max-width: 800px;
+    width: 100%;
+    margin: 64px auto 0 auto; /* centers the image section */
+    border-radius: 16px;
+}
+
+
+.card-title-large {
+    font-size: 3rem;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.card-content {
+    margin: 48px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.card-text-container {
+    max-width: 800px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 96px;
+}
+
+
+
+
+.collage-card.card-1 { 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%), url('images/1.jpg'); 
+}
+
+.collage-card.card-2 { 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%), url('images/2.jpeg'); 
+}
+
+.collage-card.card-3 { 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%), url('images/3.jpeg'); 
+}
+
+.collage-card.card-4 { 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%), url('images/4.jpeg'); 
+}
+
+.collage-card.card-5 { 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%), url('images/5.jpeg'); 
+}
+
+.collage-card.card-6 { 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%), url('images/6.jpeg'); 
+}
+
+.collage-card.card-7 { 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%), url('images/7.jpeg'); 
+}
+
+.collage-card.card-8 { 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%), url('images/8.jpeg'); 
+}
