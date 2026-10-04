@@ -38,6 +38,8 @@
     --radius-sm: 4px;
     --radius-md: 16px;
     --radius-lg: 32px;
+
+    --fade-dark: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 }
 
 *, *::before, *::after {
@@ -111,7 +113,7 @@ h1{
 .bg-section {
   height: 655px;
   max-height: 655px; /* or use min-height / vh for responsiveness */
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url('images/background.webp');
+  background-image: var(--fade-dark), url('images/background.webp');
   background-size: cover;       /* fills the area, cropping as needed */
   background-position: center;  /* center the crop */
   background-repeat: no-repeat;
@@ -372,22 +374,29 @@ h1{
 }
 
 .card-header {
-    height: 450px;
-    border-radius: var(--radius-md);
     display: flex;
     align-items: end;
     justify-content: start;
-    padding: 48px;
-    background-size: cover;
-    background-position: center;
-}
-
-.card-header {
     max-width: 800px;
     width: 100%;
-    margin: 64px auto 0 auto; /* centers the image section */
+    height: 450px;
+    margin: 64px auto 0 auto;
+    padding: 48px;
     border-radius: var(--radius-md);
+    background-size: cover;
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
+
+/* Story header photos */
+.story-1 { background-image: var(--fade-dark), url('images/stories/1.webp'); }
+.story-2 { background-image: var(--fade-dark), url('images/stories/2.webp'); }
+.story-3 { background-image: var(--fade-dark), url('images/stories/3.webp'); }
+.story-4 { background-image: var(--fade-dark), url('images/stories/4.webp'); }
+.story-5 { background-image: var(--fade-dark), url('images/stories/5.webp'); }
+.story-6 { background-image: var(--fade-dark), url('images/stories/6.webp'); }
+.story-7 { background-image: var(--fade-dark), url('images/stories/7.webp'); }
+.story-8 { background-image: var(--fade-dark), url('images/stories/8.webp'); }
 
 .extra{
     width: 100%;      /* full width of the container */
