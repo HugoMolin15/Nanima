@@ -1,6 +1,7 @@
 const SUPPORTED_LANGS = ["en", "it", "nl", "sv"];
 const DEFAULT_LANG = "en";
 const STORAGE_KEY = "lang";
+const LANGUAGE_NAMES = { en: "English", it: "Italiano", nl: "Nederlands", sv: "Svenska" };
 
 function readSavedLang() {
     try {
@@ -58,17 +59,94 @@ function applyLanguage(lang) {
     const titleKey = document.body.dataset.titleKey;
     if (titleKey && strings[titleKey]) document.title = `${strings[titleKey]} | Nanima`;
 
-    const select = document.getElementById("langSelect");
-    if (select) {
-        select.value = lang;
-        if (strings.lang_label) select.setAttribute("aria-label", strings.lang_label);
-    }
+    updateLanguageSwitchers(lang, strings);
 }
 
-applyLanguage(readSavedLang() || detectBrowserLang() || DEFAULT_LANG);
+function setLanguage(lang) {
+    const safeLang = SUPPORTED_LANGS.includes(lang) ? lang : DEFAULT_LANG;
+    applyLanguage(safeLang);
+    saveLang(safeLang);
+}
 
-document.getElementById("langSelect")?.addEventListener("change", event => {
-    const lang = SUPPORTED_LANGS.includes(event.target.value) ? event.target.value : DEFAULT_LANG;
-    applyLanguage(lang);
-    saveLang(lang);
-});
+function createFlag(lang) {
+    const flag = document.createElement("img");
+    flag.src = `/images/flags/${lang}.svg`;
+    flag.alt = "";
+    flag.width = 24;
+    flag.height = 18;
+    flag.className = "lang-flag";
+    return flag;
+}
+
+// Flag dropdown: a button shows the current flag and opens a list of languages.
+function buildLanguageSwitcher(container) {
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "lang-toggle";
+    toggle.setAttribute("aria-haspopup", "true");
+    toggle.setAttribute("aria-expanded", "false");
+
+    const menu = document.createElement("ul");
+    menu.className = "lang-menu";
+    menu.hidden = true;
+
+    const openMenu = () => {
+        menu.hidden = false;
+        toggle.setAttribute("aria-expanded", "true");
+        (menu.querySelector('[aria-current="true"]') || menu.querySelector("button"))?.focus();
+    };
+    const closeMenu = () => {
+        menu.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
+    };
+
+    SUPPORTED_LANGS.forEach(lang => {
+        const option = document.createElement("button");
+        option.type = "button";
+        option.className = "lang-option";
+        option.lang = lang;
+        option.dataset.lang = lang;
+        option.append(createFlag(lang), LANGUAGE_NAMES[lang]);
+        option.addEventListener("click", () => {
+            setLanguage(lang);
+            closeMenu();
+            toggle.focus();
+        });
+        const item = document.createElement("li");
+        item.append(option);
+        menu.append(item);
+    });
+
+    toggle.addEventListener("click", () => (menu.hidden ? openMenu() : closeMenu()));
+    document.addEventListener("click", event => {
+        if (!container.contains(event.target)) closeMenu();
+    });
+    container.addEventListener("keydown", event => {
+        if (menu.hidden) return;
+        const options = [...menu.querySelectorAll("button")];
+        const index = options.indexOf(document.activeElement);
+        if (event.key === "Escape") {
+            closeMenu();
+            toggle.focus();
+        } else if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+            event.preventDefault();
+            const step = event.key === "ArrowDown" ? 1 : -1;
+            options[(index + step + options.length) % options.length].focus();
+        }
+    });
+
+    container.append(toggle, menu);
+}
+
+function updateLanguageSwitchers(lang, strings) {
+    document.querySelectorAll(".lang-toggle").forEach(toggle => {
+        toggle.replaceChildren(createFlag(lang));
+        toggle.setAttribute("aria-label", `${strings.lang_label || "Language"}: ${LANGUAGE_NAMES[lang]}`);
+    });
+    document.querySelectorAll(".lang-option").forEach(option => {
+        option.setAttribute("aria-current", String(option.dataset.lang === lang));
+    });
+}
+
+document.querySelectorAll("[data-lang-switcher]").forEach(buildLanguageSwitcher);
+applyLanguage(readSavedLang() || detectBrowserLang() || DEFAULT_LANG);

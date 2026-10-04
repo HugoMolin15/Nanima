@@ -39,6 +39,7 @@
     --radius-md: 16px;
 
     --page-gutter: 32px;
+    --nav-height: 80px;
 
     --title-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
     --fade-dark: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.65) 100%);
@@ -47,6 +48,7 @@
 @media (max-width: 600px) {
     :root {
         --page-gutter: 16px;
+        --nav-height: 68px;
     }
 }
 
@@ -94,45 +96,151 @@ h1{
     width: 100%;
 }
 
-/* Header */
+/* Navbar */
 
-.header{
-    display: flex;
-    flex-direction: row;
-    width: 1280px;
-    max-width: 1280px;
-    padding: 24px 0;
-    justify-content: space-between;
-    align-items: center;
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    margin: 0 calc(-1 * var(--page-gutter));
+    padding: 0 var(--page-gutter);
+    background: var(--color-green);
 }
 
-.header img{
+.navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    height: var(--nav-height);
+    margin: 0 auto;
+}
+
+.navbar-logo img {
     display: block;
-    width: 64px;
-    height: 64px;
-    /* thickens the thin line drawing so it stays visible when small */
-    filter: drop-shadow(0.35px 0.35px 0 var(--color-green));
+    width: 56px;
+    height: 56px;
+    /* the logo is a dark line drawing; turn it cream so it shows on green */
+    filter: brightness(0) invert(94%) sepia(12%) saturate(300%) hue-rotate(340deg);
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-order {
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: var(--color-lime);
+    color: var(--color-green);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.navbar-order:hover {
+    background: var(--color-cream);
+}
+
+.navbar :focus-visible {
+    outline-color: var(--color-lime);
 }
 
 @media (max-width: 600px) {
-    .header img{
-        width: 52px;
-        height: 52px;
+    .navbar-logo img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .navbar-order {
+        padding: 8px 16px;
     }
 }
 
-.header a{
-    text-decoration: none;
-    color: rgba(0,0,0,0.50);
-    font-weight: 600;
+/* Language switcher (flags) */
+
+.lang-switcher {
+    position: relative;
 }
 
-.header div{
+.lang-toggle {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
+    padding: 8px 10px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.lang-toggle::after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    margin: 0 2px 4px 2px;
+    border-right: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white);
+    transform: rotate(45deg);
+}
+
+.lang-toggle:hover,
+.lang-toggle[aria-expanded="true"] {
+    border-color: var(--color-white);
+}
+
+.lang-flag {
+    display: block;
+    width: 24px;
+    height: 18px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.lang-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 30;
+    min-width: 180px;
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+    border-radius: var(--radius-md);
+    background: var(--color-cream);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 10px 12px;
+    border: 0;
+    border-radius: var(--radius-sm);
+    background: none;
+    color: var(--color-text);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.lang-option:hover {
+    background: rgba(56, 83, 60, 0.1);
+}
+
+.lang-option[aria-current="true"] {
+    font-weight: 600;
+    color: var(--color-green);
+}
+
+.navbar .lang-menu :focus-visible {
+    outline-color: var(--color-olive);
 }
 
 /* Background Image */
@@ -593,73 +701,4 @@ h1{
     font-family: var(--font-body);
     font-size: 1.25rem;
     font-weight: 300;
-}
-
-
-/* Style the dropdown like your buttons */
-#langSelect.button {
-    background-color: var(--color-cream);
-    color: var(--color-olive);
-    border: 2px solid var(--color-border);
-    border-radius: var(--radius-sm);
-    padding: 8px 32px 8px 16px; /* right padding for arrow */
-    font-size: 14px;
-    cursor: pointer;
-    appearance: none;       /* remove default arrow */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    position: relative;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Hover effect */
-#langSelect.button:hover {
-    background-color: var(--color-olive);
-    color: var(--color-white);
-    border: 2px solid var(--color-olive);
-}
-
-.select-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-/* Style the select */
-.select-wrapper select {
-    appearance: none;       /* remove default arrow */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: var(--color-cream);
-    color: var(--color-olive);
-    border: 2px solid var(--color-border);
-    border-radius: var(--radius-sm);
-    padding: 10px 32px 6px 16px; /* leave space for arrow */
-    font-family: inherit;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-/* Custom arrow using CSS */
-.select-wrapper::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 12px;
-    width: 8px;
-    height: 8px;
-    border-right: 2px solid var(--color-olive);
-    border-bottom: 2px solid var(--color-olive);
-    transform: translateY(-90%) rotate(45deg);
-    pointer-events: none;
-}
-
-/* Hover effect for both select and arrow */
-.select-wrapper:hover select {
-    background-color: var(--color-olive);
-    color: var(--color-white);
-    border: 2px solid var(--color-olive);
-}
-
-.select-wrapper:hover::after {
-    border-color: var(--color-white);
 }
