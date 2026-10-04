@@ -22,17 +22,39 @@
   font-display: swap;
 }
 
+/* Design tokens: change colors and fonts here */
+:root {
+    --color-cream: #F6EBDC;
+    --color-green: #38533C;
+    --color-olive: #4A5D3A;
+    --color-lime: #D3FF53;
+    --color-white: #FFFFFF;
+    --color-text: #1E1E1E;
+    --color-border: rgba(0, 0, 0, 0.25);
+
+    --font-body: 'Figtree', system-ui, sans-serif;
+    --font-script: 'Tangerine', cursive;
+
+    --radius-sm: 4px;
+    --radius-md: 16px;
+    --radius-lg: 32px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0 32px;
-    box-sizing: border-box;
-    font-family: 'Figtree', system-ui, sans-serif;
+    font-family: var(--font-body);
+    color: var(--color-text);
     font-weight: 300;
-    background-color: #F6EBDC;
+    background-color: var(--color-cream);
 }
 
 h1{
-    font-family: 'Tangerine', cursive;
+    font-family: var(--font-script);
     font-size: 4.5rem;
     font-weight: 700;
     line-height: 1;
@@ -97,13 +119,13 @@ h1{
   display: flex;
   justify-content: start;
   align-items: end;
-  border-radius: 16px;
+  border-radius: var(--radius-md);
   margin: 32px 0;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .bg-section div{
-    color: white;
+    color: var(--color-white);
     margin: 96px;
     display: flex;
     flex-direction: column;
@@ -140,7 +162,7 @@ h1{
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #38533C;
+    background-color: var(--color-green);
     border-radius: 20px 100px 20px 100px;
 }
 
@@ -153,8 +175,8 @@ h1{
     justify-content: center;
     align-items: center;
     align-self: stretch;
-    border-radius: 16px;
-    background: #38533C;
+    border-radius: var(--radius-md);
+    background: var(--color-green);
     position: relative; 
     overflow: visible;
 }
@@ -176,7 +198,7 @@ h1{
     position: absolute;
     font-size: 150px;
     line-height: 1;
-    color: #D3FF53; 
+    color: var(--color-lime); 
     font-weight: 600;
     z-index: 1;
     pointer-events: none;
@@ -202,7 +224,7 @@ h1{
     z-index: 2; 
     margin: 0;
     padding: 0;
-    color: white;
+    color: var(--color-white);
 }
 
 /* Collage */
@@ -213,13 +235,12 @@ h1{
     justify-content: center;
     align-items: center;
     align-self: stretch;
-    background: #F6EBDC;
+    background: var(--color-cream);
 }
 
 .collage-container{
     max-width: 1280px;
     width: 100%;
-    box-sizing: border-box;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -273,10 +294,10 @@ h1{
     left: 16px;
     margin: 0;
     z-index: 2;
-    color: #fff;
+    color: var(--color-white);
     font-size: 36px;
     font-weight: 700;
-    font-family: 'Tangerine', cursive;
+    font-family: var(--font-script);
 }
 
 /* even cards align text to right */
@@ -304,9 +325,9 @@ h1{
     margin-top: 32px;
     justify-content: center;
     align-items: center;
-    background: #38533C;
-    color: white;
-    border-radius: 32px 32px 0 0;
+    background: var(--color-green);
+    color: var(--color-white);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     gap: 32px;
 }
 
@@ -327,7 +348,7 @@ h1{
 
 .text-section a{
     text-decoration: none;
-    color: white;
+    color: var(--color-white);
 }
 
 .text-section div{
@@ -352,12 +373,11 @@ h1{
 
 .card-header {
     height: 450px;
-    border-radius: 16px;
+    border-radius: var(--radius-md);
     display: flex;
     align-items: end;
     justify-content: start;
     padding: 48px;
-    box-sizing: border-box;
     background-size: cover;
     background-position: center;
 }
@@ -366,7 +386,7 @@ h1{
     max-width: 800px;
     width: 100%;
     margin: 64px auto 0 auto; /* centers the image section */
-    border-radius: 16px;
+    border-radius: var(--radius-md);
 }
 
 .extra{
@@ -374,7 +394,7 @@ h1{
     height: 400px;    /* fixed height */
     object-fit: cover; /* ensures the image fills the space without distortion */
     display: block; 
-    border-radius: 16px;
+    border-radius: var(--radius-md);
 }
 
 video{
@@ -387,10 +407,10 @@ video{
     font-size: 56px;
     font-weight: 700;
     line-height: 1;
-    color: white;
+    color: var(--color-white);
     margin: 0;
     padding: 0;
-    font-family: 'Tangerine', cursive;
+    font-family: var(--font-script);
 }
 
 .card-content {
@@ -407,16 +427,16 @@ video{
 }
 
 .card-text-container a {
-    color: #38533C;
+    color: var(--color-green);
 }
 
 
 /* Style the dropdown like your buttons */
 #langSelect.button {
-    background-color: #F6EBDC;
-    color: #4A5D3A;
-    border: 2px solid rgba(0,0,0,0.25);
-    border-radius: 4px;
+    background-color: var(--color-cream);
+    color: var(--color-olive);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
     padding: 8px 32px 8px 16px; /* right padding for arrow */
     font-size: 14px;
     cursor: pointer;
@@ -430,9 +450,9 @@ video{
 
 /* Hover effect */
 #langSelect.button:hover {
-    background-color: #4A5D3A;
-    color: white;
-    border: 2px solid #4A5D3A;
+    background-color: var(--color-olive);
+    color: var(--color-white);
+    border: 2px solid var(--color-olive);
 }
 
 .select-wrapper {
@@ -445,10 +465,10 @@ video{
     appearance: none;       /* remove default arrow */
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-color: #F6EBDC;
-    color: #4A5D3A;
-    border: 2px solid rgba(0,0,0,0.25);
-    border-radius: 4px;
+    background-color: var(--color-cream);
+    color: var(--color-olive);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
     padding: 10px 32px 6px 16px; /* leave space for arrow */
     font-family: inherit;
     font-size: 14px;
@@ -463,19 +483,19 @@ video{
     right: 12px;
     width: 8px;
     height: 8px;
-    border-right: 2px solid #4A5D3A;
-    border-bottom: 2px solid #4A5D3A;
+    border-right: 2px solid var(--color-olive);
+    border-bottom: 2px solid var(--color-olive);
     transform: translateY(-90%) rotate(45deg);
     pointer-events: none;
 }
 
 /* Hover effect for both select and arrow */
 .select-wrapper:hover select {
-    background-color: #4A5D3A;
-    color: white;
-    border: 2px solid #4A5D3A;
+    background-color: var(--color-olive);
+    color: var(--color-white);
+    border: 2px solid var(--color-olive);
 }
 
 .select-wrapper:hover::after {
-    border-color: white;
+    border-color: var(--color-white);
 }
