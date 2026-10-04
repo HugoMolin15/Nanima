@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="title">Nanima</title>
+    <title>Our Olive Grove | Nanima</title>
     <link rel="preload" href="../fonts/Aptos-Light.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.cdnfonts.com/css/zapfino" rel="stylesheet">
     <link rel="icon" href="../images/logo-small.png" type="image/png">
 </head>
-<body>
+<body data-title-key="card_1">
 
     <!-- Header -->
     <div class="section">
@@ -67,29 +67,7 @@
     </div>
 
     <script src="../translations.js"></script>
-
-    <script>
-        const supportedLangs = ["en", "it", "nl", "sv"];
-        let currentLang = localStorage.getItem("lang") || "en";
-
-        function applyLanguage(lang) {
-            document.querySelectorAll("[data-i18n]").forEach(el => {
-                const key = el.getAttribute("data-i18n");
-                el.innerHTML = translations[lang][key];
-            });
-            document.getElementById("langBtn").textContent = lang.toUpperCase();
-            localStorage.setItem("lang", lang);
-        }
-
-        applyLanguage(currentLang);
-
-        document.getElementById("langBtn").addEventListener("click", (e) => {
-            e.preventDefault();
-            let idx = supportedLangs.indexOf(currentLang);
-            currentLang = supportedLangs[(idx + 1) % supportedLangs.length];
-            applyLanguage(currentLang);
-        });
-    </script>
+    <script src="../i18n.js"></script>
 
 </body>
 </html>

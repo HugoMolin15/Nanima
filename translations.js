@@ -4,6 +4,8 @@ const translations = {
     header_contact: "Contact",
 
     title: "Nanima",
+
+    home_title: "Extra virgin olive oil from Umbria",
     subtitle:
       "Enriches you with her natural Extra Virgin Olive Oil, touches you with creative thoughtfulness",
 
@@ -125,6 +127,8 @@ Nanima’s voice follows the echo of nature, a gentle whisper of connection and 
     header_contact: "Contatti",
 
     title: "Nanima",
+
+    home_title: "Olio extravergine d'oliva dall'Umbria",
     subtitle:
       "Ti arricchisce con il suo olio extra vergine d'oliva naturale, ti tocca con creatività e attenzione",
 
@@ -191,6 +195,8 @@ La voce di Nanima segue l’eco della natura — un dolce sussurro di connession
     header_contact: "Contact",
 
     title: "Nanima",
+
+    home_title: "Extra vierge olijfolie uit Umbrië",
     subtitle:
       "Verrijkt je met haar natuurlijke Extra Vierge Olijfolie, prikkelt je met vindingrijke nieuwsgierigheid.",
 
@@ -317,6 +323,8 @@ De stem van Nanima volgt het echo van de natuur – als een zachte fluistering v
     header_contact: "Kontakt",
 
     title: "Nanima",
+
+    home_title: "Extra virgin olivolja från Umbrien",
     subtitle:
       "Berikar dig med hennes naturliga Extra Virgin Olivolja, berör dig med en sinnrik touch.",
 
