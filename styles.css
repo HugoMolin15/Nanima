@@ -93,14 +93,18 @@ h1{
 }
 
 .header img{
-    min-width: 50px;
-    min-height: 50px;
-    max-height: 50px;
-    max-width: 50px;
+    display: block;
+    width: 64px;
+    height: 64px;
+    /* thickens the thin line drawing so it stays visible when small */
+    filter: drop-shadow(0.35px 0.35px 0 var(--color-green));
 }
 
-.header img:hover{
-    cursor: pointer;
+@media (max-width: 600px) {
+    .header img{
+        width: 52px;
+        height: 52px;
+    }
 }
 
 .header a{
