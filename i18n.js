@@ -11,6 +11,16 @@ function readSavedLang() {
     }
 }
 
+// First visit: use the first browser language we support (e.g. "sv-SE" -> "sv").
+function detectBrowserLang() {
+    const preferred = navigator.languages?.length ? navigator.languages : [navigator.language];
+    for (const tag of preferred) {
+        const code = (tag || "").slice(0, 2).toLowerCase();
+        if (SUPPORTED_LANGS.includes(code)) return code;
+    }
+    return null;
+}
+
 function saveLang(lang) {
     try {
         localStorage.setItem(STORAGE_KEY, lang);
@@ -49,10 +59,13 @@ function applyLanguage(lang) {
     if (titleKey && strings[titleKey]) document.title = `${strings[titleKey]} | Nanima`;
 
     const select = document.getElementById("langSelect");
-    if (select) select.value = lang;
+    if (select) {
+        select.value = lang;
+        if (strings.lang_label) select.setAttribute("aria-label", strings.lang_label);
+    }
 }
 
-applyLanguage(readSavedLang() || DEFAULT_LANG);
+applyLanguage(readSavedLang() || detectBrowserLang() || DEFAULT_LANG);
 
 document.getElementById("langSelect")?.addEventListener("change", event => {
     const lang = SUPPORTED_LANGS.includes(event.target.value) ? event.target.value : DEFAULT_LANG;

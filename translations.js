@@ -16,6 +16,8 @@ const translations = {
     nav_all_stories: "All stories",
 
     nav_next: "Next story",
+
+    lang_label: "Language",
     subtitle:
       "Enriches you with her natural Extra Virgin Olive Oil, touches you with creative thoughtfulness",
 
@@ -149,6 +151,8 @@ Nanima’s voice follows the echo of nature, a gentle whisper of connection and 
     nav_all_stories: "Tutte le storie",
 
     nav_next: "Storia successiva",
+
+    lang_label: "Lingua",
     subtitle:
       "Ti arricchisce con il suo olio extra vergine d'oliva naturale, ti tocca con creatività e attenzione",
 
@@ -227,6 +231,8 @@ La voce di Nanima segue l’eco della natura — un dolce sussurro di connession
     nav_all_stories: "Alle verhalen",
 
     nav_next: "Volgend verhaal",
+
+    lang_label: "Taal",
     subtitle:
       "Verrijkt je met haar natuurlijke Extra Vierge Olijfolie, prikkelt je met vindingrijke nieuwsgierigheid.",
 
@@ -365,6 +371,8 @@ De stem van Nanima volgt het echo van de natuur – als een zachte fluistering v
     nav_all_stories: "Alla berättelser",
 
     nav_next: "Nästa berättelse",
+
+    lang_label: "Språk",
     subtitle:
       "Berikar dig med hennes naturliga Extra Virgin Olivolja, berör dig med en sinnrik touch.",
 
