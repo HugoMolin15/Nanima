@@ -330,7 +330,7 @@ De stem van Nanima volgt het echo van de natuur – als een zachte fluistering v
     footer_craft: "Natuurlijk Geproduceerd",
     footer_oil: "Extra Vierge Olijfolie",
     footer_delivery: "Bezorging",
-    footer_destination:"Bezorgd binnen Nederland",
+    footer_destination:"Bezorgd binnen Zweden en Nederland",
     footer_contacts: "Contacten",
     footer_email: "nanimablog@gmail.com",
     footer_phone: "+39 388 825 2194",
