@@ -111,8 +111,7 @@ h1{
 /* Background Image */
 
 .bg-section {
-  height: 655px;
-  max-height: 655px; /* or use min-height / vh for responsiveness */
+  height: clamp(420px, 78vh, 760px);
   background-image: var(--fade-dark), url('images/background.webp');
   background-size: cover;       /* fills the area, cropping as needed */
   background-position: center;  /* center the crop */
@@ -379,13 +378,20 @@ h1{
     justify-content: start;
     max-width: 800px;
     width: 100%;
-    height: 450px;
+    height: clamp(280px, 56vw, 450px);
     margin: 64px auto 0 auto;
     padding: 48px;
     border-radius: var(--radius-md);
     background-size: cover;
     background-position: center;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+@media (max-width: 600px) {
+    .card-header {
+        margin-top: 24px;
+        padding: 24px;
+    }
 }
 
 /* Story header photos */
