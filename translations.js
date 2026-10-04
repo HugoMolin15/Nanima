@@ -10,7 +10,7 @@ const translations = {
       "Enriches you with her natural Extra Virgin Olive Oil, touches you with creative thoughtfulness",
 
     quote:
-      "Anima means soul in Italian, N carries with it the echo of nature<br>When these two are brought together, Nanima emerges — the soul of nature,<br>the rhythm of our creativeness",
+      "Anima means soul in Italian, N carries with it the echo of nature <br class='break'>When these two are brought together, Nanima emerges — the soul of nature, <br class='break'>the rhythm of our creativeness",
 
     card_1: "Our Olive Grove",
     card_2: "Days of Harvest",
@@ -120,7 +120,7 @@ Nanima’s voice follows the echo of nature, a gentle whisper of connection and 
     footer_contacts: "Contacts",
     footer_email: "nanimablog@gmail.com",
     footer_phone: "+39 388 825 2194",
-    footer_rights: "© 2025 Nanima. All rights reserved."
+    footer_rights: "© {year} Nanima. All rights reserved."
   },
 
   it: {
@@ -133,7 +133,7 @@ Nanima’s voice follows the echo of nature, a gentle whisper of connection and 
       "Ti arricchisce con il suo olio extra vergine d'oliva naturale, ti tocca con creatività e attenzione",
 
     quote:
-      "Anima significa anima in italiano, N porta con sé l'eco della natura<br>Quando queste due si uniscono, nasce Nanima — l'anima della natura,<br>il ritmo della nostra creatività",
+      "Anima significa anima in italiano, N porta con sé l'eco della natura <br class='break'>Quando queste due si uniscono, nasce Nanima — l'anima della natura, <br class='break'>il ritmo della nostra creatività",
 
     card_1: "Il nostro uliveto",
     card_2: "Giorni di raccolta",
@@ -188,7 +188,7 @@ La voce di Nanima segue l’eco della natura — un dolce sussurro di connession
     footer_contacts: "Contatti",
     footer_email: "nanimablog@gmail.com",
     footer_phone: "+39 388 825 2194",
-    footer_rights: "© 2025 Nanima. Tutti i diritti riservati."
+    footer_rights: "© {year} Nanima. Tutti i diritti riservati."
   },
 
   nl: {
@@ -201,7 +201,7 @@ La voce di Nanima segue l’eco della natura — un dolce sussurro di connession
       "Verrijkt je met haar natuurlijke Extra Vierge Olijfolie, prikkelt je met vindingrijke nieuwsgierigheid.",
 
     quote:
-      "Anima betekent ziel in het Italiaans, N draagt het fluisteren van de natuur<br>Wanneer deze twee elkaar raken ontstaat Nanima — de ziel van de natuur,<br>het ritme van ons creativiteit",
+      "Anima betekent ziel in het Italiaans, N draagt het fluisteren van de natuur <br class='break'>Wanneer deze twee elkaar raken ontstaat Nanima — de ziel van de natuur, <br class='break'>het ritme van ons creativiteit",
 
     card_1: "Onze Olijfgaard",
     card_2: "Oogstdagen",
@@ -316,7 +316,7 @@ De stem van Nanima volgt het echo van de natuur – als een zachte fluistering v
     footer_contacts: "Contacten",
     footer_email: "nanimablog@gmail.com",
     footer_phone: "+39 388 825 2194",
-    footer_rights: "© 2025 Nanima. Alle rechten voorbehouden."
+    footer_rights: "© {year} Nanima. Alle rechten voorbehouden."
   },
 
   sv: {
@@ -329,7 +329,7 @@ De stem van Nanima volgt het echo van de natuur – als een zachte fluistering v
       "Berikar dig med hennes naturliga Extra Virgin Olivolja, berör dig med en sinnrik touch.",
 
     quote:
-      "Anima betyder själ på italienska, N bär med sig ekot av naturen<br>När dessa två förs samman uppstår Nanima — naturens själ,<br>rytmen av vårt skapande",
+      "Anima betyder själ på italienska, N bär med sig ekot av naturen <br class='break'>När dessa två förs samman uppstår Nanima — naturens själ, <br class='break'>rytmen av vårt skapande",
 
     card_1: "Vår Olivlund",
     card_2: "Skördedagar",
@@ -437,6 +437,6 @@ Nanimas röst följer naturens eko – som en stilla viskning om samhörighet oc
     footer_contacts: "Kontakt",
     footer_email: "nanimablog@gmail.com",
     footer_phone: "+39 388 825 2194",
-    footer_rights: "© 2025 Nanima. Alla rättigheter förbehållna."
+    footer_rights: "© {year} Nanima. Alla rättigheter förbehållna."
   }
 };

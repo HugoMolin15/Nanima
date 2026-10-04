@@ -41,7 +41,8 @@ function applyLanguage(lang) {
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const value = strings[el.dataset.i18n];
         if (value === undefined) return;
-        el.innerHTML = el.hasAttribute("data-i18n-paragraphs") ? toParagraphs(value) : value;
+        const text = value.replaceAll("{year}", new Date().getFullYear());
+        el.innerHTML = el.hasAttribute("data-i18n-paragraphs") ? toParagraphs(text) : text;
     });
 
     const titleKey = document.body.dataset.titleKey;
