@@ -6,6 +6,12 @@ const translations = {
     title: "Nanima",
 
     home_title: "Extra virgin olive oil from Umbria",
+
+    not_found_title: "Page not found",
+
+    not_found_text: "The page you are looking for does not exist or has moved.",
+
+    not_found_link: "Back to the home page",
     subtitle:
       "Enriches you with her natural Extra Virgin Olive Oil, touches you with creative thoughtfulness",
 
@@ -129,6 +135,12 @@ Nanima’s voice follows the echo of nature, a gentle whisper of connection and 
     title: "Nanima",
 
     home_title: "Olio extravergine d'oliva dall'Umbria",
+
+    not_found_title: "Pagina non trovata",
+
+    not_found_text: "La pagina che cerchi non esiste o è stata spostata.",
+
+    not_found_link: "Torna alla home page",
     subtitle:
       "Ti arricchisce con il suo olio extra vergine d'oliva naturale, ti tocca con creatività e attenzione",
 
@@ -197,6 +209,12 @@ La voce di Nanima segue l’eco della natura — un dolce sussurro di connession
     title: "Nanima",
 
     home_title: "Extra vierge olijfolie uit Umbrië",
+
+    not_found_title: "Pagina niet gevonden",
+
+    not_found_text: "De pagina die je zoekt bestaat niet of is verplaatst.",
+
+    not_found_link: "Terug naar de homepage",
     subtitle:
       "Verrijkt je met haar natuurlijke Extra Vierge Olijfolie, prikkelt je met vindingrijke nieuwsgierigheid.",
 
@@ -325,6 +343,12 @@ De stem van Nanima volgt het echo van de natuur – als een zachte fluistering v
     title: "Nanima",
 
     home_title: "Extra virgin olivolja från Umbrien",
+
+    not_found_title: "Sidan hittades inte",
+
+    not_found_text: "Sidan du letar efter finns inte eller har flyttats.",
+
+    not_found_link: "Tillbaka till startsidan",
     subtitle:
       "Berikar dig med hennes naturliga Extra Virgin Olivolja, berör dig med en sinnrik touch.",
 

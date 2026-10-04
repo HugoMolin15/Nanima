@@ -411,6 +411,10 @@ video{
     margin-bottom: 96px;
 }
 
+.card-text-container a {
+    color: #38533C;
+}
+
 
 /* Style the dropdown like your buttons */
 #langSelect.button {

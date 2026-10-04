@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /card-template.html
+Disallow: /scripts/
+
+Sitemap: https://nanima.blog/sitemap.xml

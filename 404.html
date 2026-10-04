@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found | Nanima</title>
+    <meta name="robots" content="noindex">
+    <link rel="preload" href="/fonts/Aptos-Light.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.cdnfonts.com/css/zapfino" rel="stylesheet">
+    <link rel="icon" href="/images/logo-small.png" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body data-title-key="not_found_title">
+
+    <!-- Header -->
+    <div class="section">
+        <div class="header">
+            <a href="/">
+                <img src="/images/logo-small.png" alt="Nanima">
+            </a>
+            <div>
+                <div class="select-wrapper">
+                    <select id="langSelect" class="button">
+                        <option value="en">EN</option>
+                        <option value="it">IT</option>
+                        <option value="nl">NL</option>
+                        <option value="sv">SV</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Not Found Message -->
+    <div class="card-content section">
+        <div class="card-text-container">
+            <h1 data-i18n="not_found_title">Page not found</h1>
+            <p data-i18n="not_found_text">The page you are looking for does not exist or has moved.</p>
+            <p><a href="/" data-i18n="not_found_link">Back to the home page</a></p>
+        </div>
+    </div>
+
+    <script src="/translations.js"></script>
+    <script src="/i18n.js"></script>
+
+</body>
+</html>
