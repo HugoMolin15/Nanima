@@ -91,7 +91,7 @@ is filled to the exact level.
 Once bottling is complete, the bottles are hermetically sealed with a tight-fitting cap,
 protecting the olive oil from light and oxygen to preserve its flavor and quality.
 The finishing touch, our label, carries forward the care and the stories behind every bottle.
-Naima’s olive oil is made with love, filled with both new and old tales waiting to be shared.
+Nanima’s olive oil is made with love, filled with both new and old tales waiting to be shared.
 `,
 
     card_5_text: `Nanima’s Extra Virgin Olive Oil is naturally produced. Produced from the three classic olive
@@ -301,7 +301,7 @@ Zodra het bottelen is voltooid, worden de flessen hermetisch afgesloten met een 
 sluitende dop, waardoor de olijfolie wordt beschermd tegen licht en zuurstof en smaak en
 kwaliteit behouden blijven.
 De finishing touch, onze etiket draagt onze zorg en de verhalen achter elke fles verder.
-Naima’s olijfolie is gemaakt met liefde, gevuld met zowel nieuwe als oude verhalen die wachten
+Nanima’s olijfolie is gemaakt met liefde, gevuld met zowel nieuwe als oude verhalen die wachten
 om gedeeld te worden.
 `,
 
@@ -426,7 +426,7 @@ garanterar att varje flaska fylls till exakt rätt nivå.
 När tappningen är klar försluts flaskorna hermetiskt med ett tättslutande lock, vilket skyddar
 olivoljan från ljus och syre och bevarar smaken och kvaliteten.
 Som pricken över i:et kommer vår etikett, den för vidare den omsorg och de berättelser som
-följer varje flaska. Naimas olivolja är skapad med kärlek, fylld av både nya och gamla historier
+följer varje flaska. Nanimas olivolja är skapad med kärlek, fylld av både nya och gamla historier
 som väntar på att få delas.
 `,
 
