@@ -1,21 +1,41 @@
-body {
-    margin: 0;
-    padding: 0 32px;
-    box-sizing: border-box;
-    font-family: "aptos", serif;               
-    background-color: #F6EBDC;
-}
-
 @font-face {
-  font-family: 'aptos';
-  src: url('fonts/Aptos-Light.ttf') format('truetype');
+  font-family: 'Figtree';
+  src: url('fonts/figtree-latin.woff2') format('woff2');
+  font-weight: 300 700;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Tangerine';
+  src: url('fonts/tangerine-400-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tangerine';
+  src: url('fonts/tangerine-700-latin.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+    margin: 0;
+    padding: 0 32px;
+    box-sizing: border-box;
+    font-family: 'Figtree', system-ui, sans-serif;
+    font-weight: 300;
+    background-color: #F6EBDC;
+}
+
 h1{
-    font-family: 'Zapfino', sans-serif;
-   
+    font-family: 'Tangerine', cursive;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
 }
 
 
@@ -102,9 +122,8 @@ h1{
 }
 
 .bg-section h1{
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: -80px;
+    font-size: 96px;
+    margin: 0 0 8px 0;
     padding: 0;
 }
 
@@ -255,9 +274,9 @@ h1{
     margin: 0;
     z-index: 2;
     color: #fff;
-    font-size: 16px;
-    font-family: 'Zapfino', sans-serif;
-                                                
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Tangerine', cursive;
 }
 
 /* even cards align text to right */
@@ -365,11 +384,13 @@ video{
 
 
 .card-title-large {
-    font-size: 24px;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
     color: white;
     margin: 0;
     padding: 0;
-    font-family: 'Zapfino', sans-serif;
+    font-family: 'Tangerine', cursive;
 }
 
 .card-content {
