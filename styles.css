@@ -39,7 +39,15 @@
     --radius-md: 16px;
     --radius-lg: 32px;
 
+    --page-gutter: 32px;
+
     --fade-dark: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.65) 100%);
+}
+
+@media (max-width: 600px) {
+    :root {
+        --page-gutter: 16px;
+    }
 }
 
 *, *::before, *::after {
@@ -48,7 +56,7 @@
 
 body {
     margin: 0;
-    padding: 0 32px;
+    padding: 0 var(--page-gutter);
     font-family: var(--font-body);
     color: var(--color-text);
     font-weight: 300;
@@ -78,7 +86,7 @@ h1{
     flex-direction: row;
     width: 1280px;
     max-width: 1280px;
-    padding: 24px;
+    padding: 24px 0;
     justify-content: space-between;
     align-items: center;
 }
