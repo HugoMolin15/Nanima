@@ -12,6 +12,10 @@ const translations = {
     not_found_text: "The page you are looking for does not exist or has moved.",
 
     not_found_link: "Back to the home page",
+
+    nav_all_stories: "All stories",
+
+    nav_next: "Next story",
     subtitle:
       "Enriches you with her natural Extra Virgin Olive Oil, touches you with creative thoughtfulness",
 
@@ -141,6 +145,10 @@ Nanima’s voice follows the echo of nature, a gentle whisper of connection and 
     not_found_text: "La pagina che cerchi non esiste o è stata spostata.",
 
     not_found_link: "Torna alla home page",
+
+    nav_all_stories: "Tutte le storie",
+
+    nav_next: "Storia successiva",
     subtitle:
       "Ti arricchisce con il suo olio extra vergine d'oliva naturale, ti tocca con creatività e attenzione",
 
@@ -215,6 +223,10 @@ La voce di Nanima segue l’eco della natura — un dolce sussurro di connession
     not_found_text: "De pagina die je zoekt bestaat niet of is verplaatst.",
 
     not_found_link: "Terug naar de homepage",
+
+    nav_all_stories: "Alle verhalen",
+
+    nav_next: "Volgend verhaal",
     subtitle:
       "Verrijkt je met haar natuurlijke Extra Vierge Olijfolie, prikkelt je met vindingrijke nieuwsgierigheid.",
 
@@ -349,6 +361,10 @@ De stem van Nanima volgt het echo van de natuur – als een zachte fluistering v
     not_found_text: "Sidan du letar efter finns inte eller har flyttats.",
 
     not_found_link: "Tillbaka till startsidan",
+
+    nav_all_stories: "Alla berättelser",
+
+    nav_next: "Nästa berättelse",
     subtitle:
       "Berikar dig med hennes naturliga Extra Virgin Olivolja, berör dig med en sinnrik touch.",
 
