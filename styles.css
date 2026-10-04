@@ -41,6 +41,7 @@
 
     --page-gutter: 32px;
 
+    --title-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
     --fade-dark: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.65) 100%);
 }
 
@@ -317,38 +318,34 @@ h1{
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+    background: var(--fade-dark);
 }
-
-
-
 
 /* keep heading above the pseudo element */
 .collage-card h2 {
     position: absolute;
     bottom: 16px;
-    left: 16px;
+    left: 20px;
+    right: 20px;
     margin: 0;
     z-index: 2;
     color: var(--color-white);
-    font-size: 36px;
+    font-size: clamp(42px, 4.2vw, 54px);
     font-weight: 700;
+    line-height: 1.05;
     font-family: var(--font-script);
+    text-shadow: var(--title-shadow);
 }
 
 /* even cards align text to right */
 .collage-container .collage-card:nth-child(even) h2 {
-    left: auto;
-    right: 16px;
     text-align: right;
 }
 
 @media (max-width: 650px) {
     .collage-container .collage-card:nth-child(even) h2 {
-        left: 16px;
-        right: 0;
         text-align: left;
-}
+    }
 }
 
 
@@ -454,9 +451,10 @@ video{
 
 
 .card-title-large {
-    font-size: 56px;
+    font-size: clamp(52px, 8vw, 80px);
     font-weight: 700;
     line-height: 1;
+    text-shadow: var(--title-shadow);
     color: var(--color-white);
     margin: 0;
     padding: 0;
