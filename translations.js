@@ -125,7 +125,6 @@ Nanima’s voice follows the echo of nature, a gentle whisper of connection and 
 `,
 
     footer_products: "Products",
-    footer_craft: "Naturally Produced",
     footer_oil: "Extra Virgin Olive Oil",
     footer_delivery: "Delivery",
     footer_destination:"Delivered within Sweden and The Netherlands",
@@ -205,7 +204,6 @@ Dalle mani ai cuori, lasciano un segno.
 La voce di Nanima segue l’eco della natura — un dolce sussurro di connessione e creazione.`,
 
     footer_products: "Prodotti",
-    footer_craft: "Prodotto naturalmente",
     footer_oil: "Olio extra vergine d'oliva",
     footer_delivery: "Spedizione",
     footer_destination:"Svezia e Olanda",
@@ -345,7 +343,6 @@ De stem van Nanima volgt het echo van de natuur – als een zachte fluistering v
 `,
 
     footer_products: "Producten",
-    footer_craft: "Natuurlijk Geproduceerd",
     footer_oil: "Extra Vierge Olijfolie",
     footer_delivery: "Bezorging",
     footer_destination:"Bezorgd binnen Zweden en Nederland",
@@ -478,7 +475,6 @@ Nanimas röst följer naturens eko – som en stilla viskning om samhörighet oc
 `,
 
     footer_products: "Produkter",
-    footer_craft: "Naturligt Producerad",
     footer_oil: "Extra Virgin Olivolja",
     footer_delivery: "Leverans",
     footer_destination:"Levereras inom Sverige",

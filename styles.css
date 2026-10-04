@@ -37,7 +37,6 @@
 
     --radius-sm: 4px;
     --radius-md: 16px;
-    --radius-lg: 32px;
 
     --page-gutter: 32px;
 
@@ -406,7 +405,6 @@ h1{
     padding: 56px var(--page-gutter) 40px;
     background: var(--color-green);
     color: var(--color-white);
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .footer-columns {
