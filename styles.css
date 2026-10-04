@@ -7,18 +7,10 @@ body {
 }
 
 @font-face {
-  font-family: 'MyFont';
-  src: url('fonts/kefa.ttf');
-  font-weight: normal;
-  font-weight: lighter;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'aptos';
-  src: url('fonts/Aptos-Light.ttf');
-  font-weight: lighter;
+  src: url('fonts/Aptos-Light.ttf') format('truetype');
   font-style: normal;
+  font-display: swap;
 }
 
 h1{
@@ -478,7 +470,7 @@ video{
     border: 2px solid rgba(0,0,0,0.25);
     border-radius: 4px;
     padding: 10px 32px 6px 16px; /* leave space for arrow */
-    font-family: "MyFont", serif;
+    font-family: inherit;
     font-size: 14px;
     cursor: pointer;
 }
