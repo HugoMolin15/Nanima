@@ -196,12 +196,6 @@ h1{
   }
 }
 
-@media (max-width: 700px) {
-    .quote-container {
-        padding: 16px;
-    }
-}
-
 .quote-container::before,
 .quote-container::after {
     position: absolute;
@@ -234,6 +228,39 @@ h1{
     margin: 0;
     padding: 0;
     color: var(--color-white);
+}
+
+@media (max-width: 700px) {
+    .quote-section {
+        border-radius: var(--radius-md) 48px var(--radius-md) 48px;
+    }
+
+    .quote-container {
+        margin: 56px 20px;
+        padding: 32px 8px;
+    }
+
+    .quote-container::before,
+    .quote-container::after {
+        font-size: 96px;
+    }
+
+    .quote-container::before {
+        top: -24px;
+        left: -8px;
+        transform: none;
+    }
+
+    .quote-container::after {
+        bottom: -72px;
+        right: -8px;
+        transform: none;
+    }
+
+    .quote-container p {
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
 }
 
 /* Collage */
